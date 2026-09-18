@@ -33,7 +33,7 @@ import androidx.compose.foundation.clickable
 fun CityListScreen(
     cities: List<City>,
     onAddCity: (City) -> Unit,
-    onEditCity: (City, City) -> Unit,
+    onEditCity: (originalCity : City, editedCity: City) -> Unit,
     modifier: Modifier = Modifier
 ) {
     //adding city states
@@ -235,7 +235,7 @@ fun CityListScreenPreview() {
                 City("Calgary", "AB")
             ),
             onAddCity = {},
-            onEditCity = { _, _ -> }
+            onEditCity = { originalCity, editedCity -> }
         )
     }
 }
